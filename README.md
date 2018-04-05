@@ -24,12 +24,14 @@ exec VisualizeScatter @table_name, @x_col, @y_col, @plot_table_name, @plot_name
 ```
 3. You can use a tool like BCP to view the image you created:
 
+```
 BCP "SELECT top 1 PlotData FROM MyPlots where PlotName = 'MyFirstPlot'" queryout "C:\myfirstplot.png" -T -C RAW -d RevoTestDB
 Enter the file storage type of field PlotData [varbinary(max)]: I
 Enter prefix-length of field PlotData [4]: 0
 Enter length of field PlotData [0]: 0
 Enter field terminator [none]:
 Do you want to save this format information in a file? [Y/n] n
+```
 
 Open the image saved in C:\myfirstplot.png:
 
