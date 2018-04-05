@@ -22,7 +22,7 @@ declare @plot_name varchar(MAX) = 'MyFirstPlot'
 
 exec VisualizeScatter @table_name, @x_col, @y_col, @plot_table_name, @plot_name
 ```
-3. You can use a tool like BCP to export and save the image you created. Run the below command to save your image as C:\myfirstplot.png:
+3. You can use a tool like BCP to export the image you created. Run the below command to save your image as C:\myfirstplot.png:
 
 ```cmd
 BCP "SELECT top 1 PlotData FROM MyPlots where PlotName = 'MyFirstPlot'" queryout "C:\myfirstplot.png" -T -C RAW -d RevoTestDB
