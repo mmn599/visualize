@@ -10,7 +10,7 @@ First, make sure Machine Learning Services for SQL Server (including Python) is 
 1. Execute the VisualizeScatter.sql query against the database you want to use. This installs a stored procedure that generates and stores scatter plots of your data. 
 2. Call the stored procedure like so:
 
-```
+```sql
 -- Generates a scatter plot of CRSDepTime vs. ArrDelay columns from the AirlineDemoSmall table.
 -- Stores the .png image data of this scatter plot in the MyPlots table.
 
@@ -24,7 +24,7 @@ exec VisualizeScatter @table_name, @x_col, @y_col, @plot_table_name, @plot_name
 ```
 3. You can use a tool like BCP to view the image you created:
 
-```
+```cmd
 BCP "SELECT top 1 PlotData FROM MyPlots where PlotName = 'MyFirstPlot'" queryout "C:\myfirstplot.png" -T -C RAW -d RevoTestDB
 Enter the file storage type of field PlotData [varbinary(max)]: I
 Enter prefix-length of field PlotData [4]: 0
