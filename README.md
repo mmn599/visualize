@@ -1,6 +1,6 @@
 # Visualize
 
-Visualize is a SQL Server tool to create data visualizations without the data leaving the server. It uses Machine Learning Services for SQL Server
+Visualize is a SQL Server tool to create data visualizations without the data leaving the server.
 
 # Getting Started
 
